@@ -1,92 +1,58 @@
-# Crop Auction Platform
+# 🌾 AgriBid – Frontend
 
-A React 18 front-end application for a "Crop Auction" platform where farmers can list their crops for auction and buyers can bid on them.
+Welcome to the frontend repository of the **AgriBid**, a real-time web application designed to connect **farmers** and **buyers** through a seamless crop auctioning system. This system ensures transparency, efficiency, and fairness in agricultural transactions.
 
-## Features
+> 🔗 **Backend Repository**: [AgriBid Backend](https://github.com/1204Vraj/AgriBid_Backend)
 
-- **Role-based dashboards** (Farmer and Buyer)
-- **Farmer features**:
-  - View and manage auctions
-  - Create new auctions with photo uploads
-  - Set crop details, base price, and bidding deadline
-- **Buyer features**:
-  - Search auctions by crop name and region
-  - View auction details and place bids
-  - Real-time bid updates via Socket.IO
-- **Protected routes** based on user role
-- **Responsive design** for all screen sizes
+---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- React 18
-- Vite
-- Tailwind CSS
-- React Router DOM v6
-- React Query for data fetching
-- Redux Toolkit for auth/role state
-- React Hook Form + Zod for form validation
-- Axios for API calls
-- Socket.IO client for real-time updates
+- ⚛️ **React** – UI development
+- 🎨 **Tailwind CSS** – Styling
+- 🧩 **Zod + React Hook Form** – Form validation
+- 🌐 **Axios** – HTTP communication
+- 🧠 **TanStack Query (React Query)** – State & data fetching
+- 🔐 **JWT Token** – Authentication & role management
+- ⚙️ **Vite** – Development build tool
 
-## Project Structure
+---
 
-\`\`\`
-src/
-├── components/         # Reusable UI components
-│   ├── ui/             # Base UI components (Button, Input, etc.)
-│   └── ...             # Feature-specific components
-├── hooks/              # Custom React hooks
-├── pages/              # Page components
-├── store/              # Redux store and slices
-├── utils/              # Utility functions
-├── App.jsx             # Main app component with routes
-└── main.jsx            # Entry point
-\`\`\`
+## ✨ Features
 
-## Getting Started
+### 🔐 Role-Based Authentication
+- Secure login for **Farmers** and **Buyers**
+- JWT-based token system
+- Auth state persisted in `localStorage`
 
-1. Clone the repository
-2. Install dependencies:
-   \`\`\`
-   npm install
-   \`\`\`
-3. Start the development server:
-   \`\`\`
-   npm run dev
-   \`\`\`
+### 🧑‍🌾 Farmer Features
+- Post new crop auctions with images, description, price & deadline
+- View list of current auctions and bidders
+- Real-time updates on bidding activity
 
-## API Endpoints
+### 🛒 Buyer Features
+- Browse available auctions in real-time
+- Place competitive bids instantly
+- Track bidding history and highest bid per auction
 
-The front-end expects the following API endpoints:
+### 🕒 Real-Time Auction System
+- Live bid updates using WebSockets or polling
+- Automatic auction expiration and highest bidder selection
+- Notification of auction status updates (upcoming, live, closed)
 
-- **Authentication**:
-  - POST `/api/auth/login` - Login with email, password, and role
-  - POST `/api/auth/logout` - Logout
+### 🎯 Additional Features
+- Smart dashboard redirection after login (`/app/farmer` or `/app/buyer`)
+- Form input validation using **Zod**
+- Protected routes for authenticated users
+- File uploads for auction images (via FormData)
+- Error handling and user feedback (toasts/alerts)
 
-- **Auctions**:
-  - GET `/api/auctions` - Get all auctions (with optional search params)
-  - GET `/api/auctions/farmer` - Get auctions for the logged-in farmer
-  - GET `/api/auctions/:id` - Get auction details
-  - POST `/api/auctions` - Create a new auction
+---
 
-- **Bids**:
-  - GET `/api/auctions/:id/bids` - Get bids for an auction
-  - POST `/api/auctions/:id/bids` - Place a bid on an auction
+## 🚀 Getting Started
 
-## Socket.IO Events
-
-The application listens for real-time updates on the following channels:
-
-- `auction:<id>` - For real-time bid updates on a specific auction
-
-## Demo Credentials
-
-For testing purposes, you can use the following credentials:
-
-- **Farmer**:
-  - Email: farmer@example.com
-  - Password: password123
-
-- **Buyer**:
-  - Email: buyer@example.com
-  - Password: password123
+```bash
+git clone https://github.com/1204Vraj/AgriBid_Frontend.git
+cd AgriBid_Frontend
+npm install
+npm run dev
