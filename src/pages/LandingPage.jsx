@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import Button from "../components/ui/Button"
-
+import picture1 from "../assets/picture1.jpg"
 const LandingPage = () => {
   return (
     <div className="min-h-screen">
@@ -8,7 +8,7 @@ const LandingPage = () => {
       <section className="relative bg-gradient-to-b from-green-800 to-green-600 text-white">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-30"></div>
-          <img src="/hero-background.png" alt="Farm field" className="w-full h-full object-cover" />
+          <img src={picture1} alt="Farm field" className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="max-w-3xl">
@@ -220,111 +220,6 @@ const LandingPage = () => {
                   </div>
                 </li>
               </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-green-700 text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold mb-2">5,000+</div>
-              <div className="text-green-200">Farmers</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">3,200+</div>
-              <div className="text-green-200">Buyers</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">12,000+</div>
-              <div className="text-green-200">Auctions Completed</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">$8.5M+</div>
-              <div className="text-green-200">Value Traded</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Testimonial 1 */}
-            <div className="bg-gray-50 rounded-lg p-6 relative">
-              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-2 shadow-md">
-                <div className="bg-green-100 rounded-full w-14 h-14 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="pt-8 text-center">
-                <p className="text-gray-600 mb-4">
-                  "As a small farmer, I struggled to find buyers for my organic vegetables. Crop Auction connected me
-                  with buyers willing to pay premium prices for my produce."
-                </p>
-                <p className="font-semibold">John D.</p>
-                <p className="text-sm text-gray-500">Organic Farmer, California</p>
-              </div>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="bg-gray-50 rounded-lg p-6 relative">
-              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-2 shadow-md">
-                <div className="bg-green-100 rounded-full w-14 h-14 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="pt-8 text-center">
-                <p className="text-gray-600 mb-4">
-                  "The real-time bidding system is fantastic! I can see bids coming in as they happen and make informed
-                  decisions about my purchases."
-                </p>
-                <p className="font-semibold">Sarah M.</p>
-                <p className="text-sm text-gray-500">Restaurant Owner, New York</p>
-              </div>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div className="bg-gray-50 rounded-lg p-6 relative">
-              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-2 shadow-md">
-                <div className="bg-green-100 rounded-full w-14 h-14 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="pt-8 text-center">
-                <p className="text-gray-600 mb-4">
-                  "I've been able to expand my farm's reach beyond local markets. Now I sell to buyers across the
-                  country at better prices than I could get locally."
-                </p>
-                <p className="font-semibold">Michael T.</p>
-                <p className="text-sm text-gray-500">Grain Farmer, Iowa</p>
-              </div>
             </div>
           </div>
         </div>

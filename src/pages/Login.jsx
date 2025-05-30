@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom"
 import Input from "../components/ui/Input"
 import Button from "../components/ui/Button"
 import { login } from "../store/authSlice"
+import { Link } from "react-router-dom"
 
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -101,7 +102,15 @@ const Login = () => {
                 </Button>
               </div>
             </form>
+
             {error && <p className="mt-4 text-red-600">{error}</p>}
+
+            <p className="mt-4 text-center text-sm text-gray-600">
+              Don't have an account?{" "}
+              <Link to="/signup" className="font-medium text-blue-600 hover:underline">
+                Create one here
+              </Link>
+            </p>
           </div>
         </div>
       </div>
